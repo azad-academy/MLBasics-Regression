@@ -40,18 +40,20 @@ def plot_data(X,Y,model_pts=None,classification=False,canvas=None,xtitle=None,yt
             ax.scatter(X[i,0],X[i,1],color=colors[Y[i]],alpha=0.5)
         else:
             ax.scatter(X,Y,color=colors,alpha=0.5)
-        if(model_pts is not None):
-            ax.plot(model_pts[:,0],model_pts[:,1],'r',linewidth=4)
-        if(xtitle is not None):
-            ax.set_xlabel(xtitle,fontweight='bold',fontsize=16)
-        else:
-            ax.set_xlabel(r'$X_1^i$',fontweight='bold',fontsize=16)
-        if(xtitle is not None):
-            ax.set_ylabel(ytitle,fontweight='bold',fontsize=16)
-        else:    
-            ax.set_ylabel(r'$Y^i$',fontweight='bold',fontsize=16)
-        ax.spines['top'].set_visible(False)
-        ax.spines['right'].set_visible(False)
+        
+    if(model_pts is not None):
+        ax.plot(model_pts[:,0],model_pts[:,1],'r',linewidth=4)
+    
+    if(xtitle is not None):
+        ax.set_xlabel(xtitle,fontweight='bold',fontsize=16)
+    else:
+        ax.set_xlabel(r'$X_1^i$',fontweight='bold',fontsize=16)
+    if(xtitle is not None):
+        ax.set_ylabel(ytitle,fontweight='bold',fontsize=16)
+    else:    
+        ax.set_ylabel(r'$Y^i$',fontweight='bold',fontsize=16)
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
 
 def linear_save_animation(X,Y,t):
     import PIL
@@ -70,7 +72,7 @@ def linear_save_animation(X,Y,t):
     imgs[0].save('regression.gif',format='GIF',append_images=imgs,save_all=True,duration=200,loop=0)
 
 
-def gen_data(N):
+def gen_non_linear_data(N):
     X = 0.55*np.random.normal(size=N)+0.5
 
     Xt = 0.65*X-0.35
