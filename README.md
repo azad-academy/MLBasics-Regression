@@ -22,11 +22,12 @@ The full tutorial is available on following links:
 
 On Medium:
 
-https://azad-wolf.medium.com/
+https://azad-wolf.medium.com/ml-basics-part-1-regression-a-gateway-method-to-machine-learning-36d54d233907
 
 On Substack:
 
-https://azadwolf.substack.com/p/
+https://azadwolf.substack.com/p/ml-basics-part-1-regression-a-gateway
+
 
 
 
